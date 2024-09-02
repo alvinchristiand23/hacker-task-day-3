@@ -1,16 +1,12 @@
-import './App.css';
-import { createContext } from 'react';
-import { userData } from './data/data';
-import { Child } from './components/Child';
+import GlobalStateProvider from './contexts/GlobalStateContext';
+import AppRoutes from './routes/AppRoutes';
 
-export const GlobalContext = createContext(null);
-
-function App() {
+const App = () => {
   return (
-    <GlobalContext.Provider value={userData}>
-      <Child />
-    </GlobalContext.Provider>
+    <GlobalStateProvider>
+      <AppRoutes />
+    </GlobalStateProvider>
   );
-}
+};
 
 export default App;
