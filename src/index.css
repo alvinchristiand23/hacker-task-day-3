@@ -14,12 +14,12 @@
 }
 
 .dark {
-  --bg-color: 25 25 25;
+  --bg-color: 30 30 46;
   --text-primary: 224 224 224;
   --text-secondary: 176 176 176;
-  --accent: 3 169 244;
-  --gradient-start: 1 155 166;
-  --gradient-end: 0 79 91;
+  --accent: 0 163 158;
+  --gradient-start: 0 163 158;
+  --gradient-end: 46 58 98;
 }
 
 body {

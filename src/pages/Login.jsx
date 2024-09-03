@@ -11,14 +11,14 @@ const Login = () => {
 
   const navigate = useNavigate();
   return (
-    <div className='flex items-center justify-center min-h-screen bg-accent'>
-      <div className='w-96 h-[28rem] rounded-xl bg-bg-color flex flex-col items-center p-12 justify-center'>
+    <div className='flex items-center justify-center min-h-screen bg-bg-color'>
+      <div className='w-96 h-[28rem] rounded-xl flex flex-col items-center p-12 justify-center shadow-md bg-white text-black'>
         <img src={PadiUMKM} alt='Padi UMKM' className='w-24' />
         <input
           placeholder='Name'
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className='px-4 py-2 mt-12 mb-6 border-2 rounded-md border-accent'
+          className='px-4 py-2 mt-12 mb-6 text-center border-2 rounded-md border-accent'
         />
         <Button
           disabled={!name}

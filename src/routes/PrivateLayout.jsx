@@ -6,7 +6,11 @@ import PropTypes from 'prop-types';
 const PrivateRoute = ({ children }) => {
   const { user } = useGlobalState();
 
-  return user ? children : <Navigate to='/login' replace={true} />;
+  return user || localStorage.getItem('userData') ? (
+    children
+  ) : (
+    <Navigate to='/login' replace={true} />
+  );
 };
 
 export default PrivateRoute;
