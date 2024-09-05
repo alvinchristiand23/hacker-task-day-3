@@ -1,14 +1,15 @@
 import { helpTopic } from '../constants/data';
-import { Card } from '../components/Card';
+import { CardHelp } from '../components/Card';
+import { PageTitle } from '../components/PageTitle';
 
 const Help = () => {
   return (
-    <div className='flex flex-col items-center justify-between py-24 mx-auto w-[80%] space-y-6'>
-      <h1 className='text-3xl font-bold'>Pilih Topik Sesuai Kendalamu</h1>
-      <div className='flex justify-between space-x-6'>
-        {helpTopic.map((item, index) => (
-          <Card
-            key={item.title + index}
+    <div className='w-[80%] mx-auto flex py-24 flex-col justify-center gap-y-6'>
+      <PageTitle title={'Pilih Topik Sesuai Kendalamu'} />
+      <div className='grid grid-cols-3 gap-x-6'>
+        {helpTopic.map((item) => (
+          <CardHelp
+            key={item.title}
             logo={item.logo}
             title={item.title}
             descriptions={item.descriptions}

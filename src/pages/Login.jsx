@@ -1,24 +1,31 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useGlobalState } from '../hooks/useGlobalState';
 import { Button } from '../components/Button';
+import { Input } from '../components/Input';
 import PadiUMKM from '../assets/images/padiUMKM.png';
 
 const Login = () => {
+  const navigate = useNavigate();
   const { user, handleLoginUser } = useGlobalState();
-
   const [name, setName] = useState('');
 
-  const navigate = useNavigate();
+  useEffect(() => {
+    if (user) {
+      navigate('/');
+    }
+  }, [user]);
+
   return (
-    <div className='flex items-center justify-center min-h-screen bg-bg-color'>
+    <div className='flex items-center justify-center min-h-screen bg-background'>
       <div className='w-96 h-[28rem] rounded-xl flex flex-col items-center p-12 justify-center shadow-md bg-white text-black'>
         <img src={PadiUMKM} alt='Padi UMKM' className='w-24' />
-        <input
+        <Input
           placeholder='Name'
+          maxLength={5}
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className='px-4 py-2 mt-12 mb-6 text-center border-2 rounded-md border-accent'
+          className={'text-center'}
         />
         <Button
           disabled={!name}
@@ -26,7 +33,7 @@ const Login = () => {
             handleLoginUser(name);
             navigate('/');
           }}
-          caption={user ? 'Logout' : 'Login'}
+          textLabel={user ? 'Logout' : 'Login'}
         />
       </div>
     </div>

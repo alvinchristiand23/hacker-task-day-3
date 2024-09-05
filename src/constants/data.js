@@ -82,3 +82,35 @@ export const MediaInformations = [
       'Handphone menjadi kebutuhan penting untuk komunikasi. Dulunya handphone hanya bisa digunakan untuk telepon maupun SMS namun lambat laun fungsinya menjadi lebih kompleks',
   },
 ];
+
+export const contactInformation = [
+  {
+    title: 'Layanan informasi Pengguna',
+    items: [
+      {
+        name: 'Email',
+        value: ['cs@padiumkm.id'],
+      },
+      {
+        name: 'Whatsapp',
+        value: ['+62 812 9000 7820'],
+      },
+      {
+        name: 'Senin - Jumat',
+        value: ['08:00 - 17:00 WIB'],
+      },
+    ],
+  },
+  {
+    title: 'Kantor Kami',
+    items: [
+      {
+        name: 'Padi UMKM Headquarters',
+        value: [
+          'Gedung Telkom Direktorat Business and Technology',
+          'Jln. Prof. Dr. Soepomo No. 139, Jakarta Selatan, DKI Jakarta, 12810 Indonesia',
+        ],
+      },
+    ],
+  },
+];

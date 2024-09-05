@@ -5,18 +5,18 @@
 @tailwind utilities;
 
 :root {
-  --bg-color: 255 255 255;
-  --text-primary: 0 32 35;
-  --text-secondary: 68 75 85;
+  --background: 255 255 255;
+  --primary: 0 32 35;
+  --secondary: 68 75 85;
   --accent: 1 158 169;
   --gradient-start: 215 252 255;
   --gradient-end: 41 188 212;
 }
 
 .dark {
-  --bg-color: 30 30 46;
-  --text-primary: 224 224 224;
-  --text-secondary: 176 176 176;
+  --background: 30 30 46;
+  --primary: 242 242 242;
+  --secondary: 212 212 212;
   --accent: 0 163 158;
   --gradient-start: 0 163 158;
   --gradient-end: 46 58 98;
@@ -25,7 +25,9 @@
 body {
   box-sizing: border-box;
   text-wrap: wrap;
+
   font-family: 'Source Sans 3', sans-serif;
-  background-color: rgb(var(--bg-color));
-  color: rgb(var(--text-primary));
+  color: rgb(var(--primary));
+
+  background-color: rgb(var(--background));
 }
